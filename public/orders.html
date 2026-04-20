@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orders</title>
+</head>
+<body>
+
+<h1>Order History</h1>
+
+<div id="orders"></div>
+
+<script>
+async function loadOrders() {
+    const res = await fetch("http://localhost:3000/order");
+    const data = await res.json();
+
+    const div = document.getElementById("orders");
+
+    data.forEach(order => {
+        const d = document.createElement("div");
+
+        d.innerHTML = `
+            <p>Total: ₹${order.total}</p>
+            <p>Items: ${order.items.map(i => i.name + " x " + i.qty).join(", ")}</p>
+            <hr>
+        `;
+
+        div.appendChild(d);
+    });
+}
+
+loadOrders();
+</script>
+
+</body>
+</html>

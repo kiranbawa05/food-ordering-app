@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>🍔 Food App</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="orders.html">Orders</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+
+<div class="login-container">
+    <div class="login-box">
+        <h2>Give Feedback</h2>
+
+        <div id="stars">
+            <span onclick="setRating(1)">⭐</span>
+            <span onclick="setRating(2)">⭐</span>
+            <span onclick="setRating(3)">⭐</span>
+            <span onclick="setRating(4)">⭐</span>
+            <span onclick="setRating(5)">⭐</span>
+        </div>
+
+        <textarea id="msg" placeholder="Write your feedback..."></textarea>
+
+        <button onclick="submitFeedback()">Submit</button>
+
+        <p id="status"></p>
+    </div>
+</div>
+
+<script src="/feedback.js"></script>
+
+</body>
+</html>

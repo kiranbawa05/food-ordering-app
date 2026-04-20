@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>🍔 Food App</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="orders.html">Orders</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <div>
+        <h2>Menu</h2>
+        <input id="search" placeholder="Search..." onkeyup="searchItem()">
+        <div id="menu"></div>
+    </div>
+
+    <div class="cart">
+        <h2>Cart</h2>
+        <div id="cart"></div>
+        <h3 id="total"></h3>
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
